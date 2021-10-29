@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import HOCImplementation from "./HOC/HOCImplementation";
+import RPImplementation from "./RenderProps/RPImplementation";
+import HooksImplementation from "./Hooks/HooksImplementation";
+import React from "react";
+import Dropdown from "./Dropdown";
+import DropdownHooks from "./DropdownHooks";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="container mt-3">
+        <div className="row">
+          <div className="col">
+            <RPImplementation />
+          </div>
+          <div className="col">
+            <HOCImplementation />
+          </div>
+
+          <div className="col">
+            <HooksImplementation />
+          </div>
+          {/* <div className="col">
+            <DropdownHooks />
+          </div> */}
+          {/* <div className="col">
+            <Dropdown />
+          </div> */}
+        </div>
+      </div>
+    </>
   );
-}
+};
 
 export default App;
